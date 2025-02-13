@@ -1,4 +1,6 @@
 balance =0
+class InsufficientFunds(Exception):
+    pass
 def deposit(amount):
     global balance
     if amount<=0:
@@ -7,10 +9,12 @@ def deposit(amount):
 def withdraw(amount):
     global balance
     if amount>balance:
-        raise ValueError("Amount must be less than the actual balance in account.")
+        raise InsufficientFunds(f"Not enough funds. Your current balance is {balance}")
+
     balance-=amount
 deposit(90)
 deposit(20)
 deposit(9)
-withdraw(110)
+withdraw(1110)
+
 print(balance)
