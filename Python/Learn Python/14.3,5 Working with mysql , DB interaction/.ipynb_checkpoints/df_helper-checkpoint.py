@@ -16,7 +16,7 @@ import pymysql
 from contextlib import contextmanager
 
 
-@contextmanager                      # it make task easy and efficient , helps in closing the connection automatically
+@contextmanager
 def get_db_cursor(commit=False):
     connection = pymysql.connect(
         host="localhost",
@@ -61,7 +61,7 @@ def delete_expenses_for_date(expense_date):
         cursor.execute("DELETE FROM expenses WHERE expense_date=%s",(expense_date,))
 
 if __name__=="__main__":
-    fetch_all_records()
+    #fetch_all_records()
     #fetch_expenses_for_date("2024-08-01")
     #insert_expense("2025-08-20",300,"food","Panipuri")
     print("---fetch expense---")

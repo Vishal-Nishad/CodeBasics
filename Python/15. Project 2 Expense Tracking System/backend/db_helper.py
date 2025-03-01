@@ -1,22 +1,8 @@
-'''import mysql.connector
-connection=mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="vishal",
-    database="expense_manager"
-
-)
-
-if connection.is_connected():
-    print("connection successful")
-else:
-    print("Failed in connecting to a database")'''
-
 import pymysql
 from contextlib import contextmanager
 
 
-@contextmanager                      # it make task easy and efficient , helps in closing the connection automatically
+@contextmanager
 def get_db_cursor(commit=False):
     connection = pymysql.connect(
         host="localhost",
@@ -35,13 +21,13 @@ def get_db_cursor(commit=False):
     cursor.close()
     connection.close()
 
-def fetch_all_records():
+'''def fetch_all_records():
     with get_db_cursor() as cursor:
 
         cursor.execute("SELECT* FROM expenses")
         expenses=cursor.fetchall()
         for expense in expenses:
-            print(expense)
+            print(expense)'''
 
 def fetch_expenses_for_date(expense_date):
     with get_db_cursor() as cursor:
@@ -49,6 +35,7 @@ def fetch_expenses_for_date(expense_date):
         expenses=cursor.fetchall()
         for expense in expenses:
             print(expense)
+        return expenses
 
 def insert_expense(expense_date, amount, category,notes):
     with get_db_cursor(commit=True) as cursor:
@@ -60,11 +47,22 @@ def delete_expenses_for_date(expense_date):
     with get_db_cursor(commit=True) as cursor:
         cursor.execute("DELETE FROM expenses WHERE expense_date=%s",(expense_date,))
 
+def fetch_expenses_summary(start_date,end_date):
+    with get_db_cursor() as cursor:
+        cursor.execute(
+            '''SELECT category, SUM(amount) as total
+            FROM expenses WHERE expense_date 
+            BETWEEN %s and %s
+            GROUP BY category;''',
+            (start_date,end_date)
+        )
+        data=cursor.fetchall()
+        return data
 if __name__=="__main__":
-    fetch_all_records()
-    #fetch_expenses_for_date("2024-08-01")
-    #insert_expense("2025-08-20",300,"food","Panipuri")
-    print("---fetch expense---")
-    fetch_expenses_for_date("2025-08-20")
-    print("--delete expense--")
-    delete_expenses_for_date("2025-08-20")
+    #expenses=fetch_expenses_for_date("2024-08-01")
+    #print(expenses)
+    #insert_expense("2024-08-25",40,"food","Eat somosa")
+    #delete_expenses_for_date("2024-08-25")
+    summary=fetch_expenses_summary("2024-08-01","2024-08-05")
+    for record in summary:
+        print(record)
