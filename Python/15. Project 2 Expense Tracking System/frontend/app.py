@@ -4,7 +4,7 @@ from analytics_ui import analytics_tab
 
 # API_URL = "http://localhost:8000"
 
-st.title("Expense Tracking System")
+st.title("Expense Management System")
 
 tab1,tab2 = st.tabs(["Add/Update","Analytics"])
 
