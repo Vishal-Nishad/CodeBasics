@@ -16,3 +16,28 @@
 2025-03-02 10:42:42,761 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-01
 2025-03-02 10:50:12,595 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-01
 2025-03-02 10:54:35,009 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-01
+2025-03-02 11:19:46,293 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-01
+2025-03-02 11:33:22,349 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-01
+2025-03-02 11:36:04,662 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-01
+2025-03-02 11:45:41,406 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-01
+2025-03-02 11:46:05,956 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-01
+2025-03-02 12:04:11,495 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-01
+2025-03-02 12:04:45,614 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-01
+2025-03-02 12:05:05,950 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-01
+2025-03-02 12:05:17,480 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-01
+2025-03-02 12:05:31,000 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-02
+2025-03-02 12:06:23,148 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-02
+2025-03-02 13:01:54,584 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-01
+2025-03-02 13:02:01,739 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-07
+2025-03-02 13:02:27,048 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-07
+2025-03-02 13:02:29,101 - db_helper - INFO - delete_expenses_for_date called with 2024-08-07
+2025-03-02 13:02:29,117 - db_helper - INFO - insert_expense called with date: 2024-08-07, amount: 50.0, category: Food, notes: samosa
+2025-03-02 13:03:16,499 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-07
+2025-03-02 13:03:18,552 - db_helper - INFO - delete_expenses_for_date called with 2024-08-07
+2025-03-02 13:03:18,570 - db_helper - INFO - insert_expense called with date: 2024-08-07, amount: 50.0, category: Food, notes: samosa
+2025-03-02 13:03:18,584 - db_helper - INFO - insert_expense called with date: 2024-08-07, amount: 100.0, category: Shopping, notes: Sleeper
+2025-03-02 13:03:25,630 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-01
+2025-03-02 13:03:30,063 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-07
+2025-03-02 13:41:20,091 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-01
+2025-03-02 13:41:20,110 - db_helper - INFO - fetch_expense_summary called with start: 2024-08-01, end: 2024-08-05
+2025-03-02 13:41:58,481 - db_helper - INFO - fetch_expense_summary called with start: 2024-08-01, end: 2024-08-05

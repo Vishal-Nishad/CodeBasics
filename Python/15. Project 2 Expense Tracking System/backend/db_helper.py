@@ -74,10 +74,10 @@ def fetch_expenses_summary(start_date,end_date):
         data=cursor.fetchall()
         return data
 if __name__=="__main__":
-    expenses=fetch_expenses_for_date("2024-08-01")
-    print(expenses)
+    # expenses=fetch_expenses_for_date("2024-08-01")
+    # print(expenses)
     #insert_expense("2024-08-25",40,"food","Eat somosa")
     #delete_expenses_for_date("2024-08-25")
-    # summary=fetch_expenses_summary("2024-08-01","2024-08-05")
-    # for record in summary:
-    #     print(record)
+    summary=fetch_expenses_summary("2024-08-01","2024-08-05")
+    for record in summary:
+        print(record)
