@@ -29,6 +29,7 @@ def analytics_tab():
         df_sorted=df.sort_values(by="Percentage",ascending=False)
 
 
-        st.bar_chart(data=df_sorted.set_index("Category")["Percetage"])
-
+        st.bar_chart(data=df_sorted.set_index("Category")["Percentage"],width=0,height=0,use_container_width=True)
+        df_sorted["Total"]=df_sorted["Total"].map("{:.2f}".format)
+        df_sorted["Percentage"]=df_sorted["Percentage"].map("{:.2f}".format)
         st.table(df_sorted)
