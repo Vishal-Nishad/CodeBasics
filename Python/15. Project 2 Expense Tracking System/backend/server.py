@@ -11,11 +11,25 @@ class Expense(BaseModel):
 
 
 app=FastAPI()
+@app.get("/")
+def home():
+    return {"message": "FastAPI is running!"}
+
 
 @app.get("/expenses/{expense_date}", response_model=List[Expense])
 def get_expenses(expense_date: date):
-    expenses=db_helper.fetch_expenses_for_date(expense_date)
+    print(f"Received GET request for {expense_date}")
+    expenses = db_helper.fetch_expenses_for_date(expense_date)
+
+    # Debug print
+    print(f"Fetched expenses: {expenses}")
+
+    if not expenses:
+        return []
+
     return expenses
+
+
 
 @app.post("/expenses/{expense_date}")
 def add_or_update_expense(expense_date:date,expenses:List[Expense]):

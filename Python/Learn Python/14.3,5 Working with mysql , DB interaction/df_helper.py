@@ -34,7 +34,7 @@ def get_db_cursor(commit=False):
 
     cursor.close()
     connection.close()
-
+    print("Connection Closed")
 def fetch_all_records():
     with get_db_cursor() as cursor:
 
@@ -67,4 +67,4 @@ if __name__=="__main__":
     print("---fetch expense---")
     fetch_expenses_for_date("2025-08-20")
     print("--delete expense--")
-    delete_expenses_for_date("2025-08-20")
+    #delete_expenses_for_date("2025-08-20")
