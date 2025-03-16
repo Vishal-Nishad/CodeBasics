@@ -1,4 +1,0 @@
-ERROR:root:this is an error msg
-CRITICAL:root:this is a critical msg
-2025-02-26 23:18:19,102 - ERROR - this is an error msg
-2025-02-26 23:18:19,103 - CRITICAL - this is a critical msg
