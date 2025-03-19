@@ -55,3 +55,5 @@
 2025-03-02 16:59:57,062 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-07
 2025-03-02 17:00:00,944 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-07
 2025-03-02 17:00:02,981 - db_helper - INFO - fetch_expense_summary called with start: 2024-08-01, end: 2024-08-10
+2025-03-18 22:15:20,342 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-01
+2025-03-18 22:15:39,237 - db_helper - INFO - fetch_expenses_for_date called with 2024-08-07
