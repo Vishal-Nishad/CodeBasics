@@ -1,4 +1,4 @@
-SELECT * FROM moviesdb.movies;
+
 USE moviesdb;
 SELECT DISTINCT industry FROM movies;
 SELECT * FROM movies WHERE industry = "Bollywood";

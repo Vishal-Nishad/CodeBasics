@@ -14,13 +14,13 @@ GROUP BY studio
 ORDER BY total DESC;
 
 SELECT industry,
-	   COUNT(industry) as cnt,
+	   COUNT(*) as cnt,
        ROUND(AVG(imdb_rating),2) as avg_rating
 FROM movies
 GROUP BY industry;
 
 SELECT studio,
-	   COUNT(studio) as cnt,
+	   COUNT(*) as cnt,
        ROUND(AVG(imdb_rating),2) as avg_rating
 FROM movies
 WHERE studio!="" -- skipping null data
